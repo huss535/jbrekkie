@@ -40,6 +40,12 @@ h1 {
 
 section {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
   min-height: 100vh;
 }
 
@@ -131,6 +137,15 @@ button::before {
   z-index: -1;
 }
 
+/* 
+#tour-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+} */
 
 .tour-info {
   font-size: var(--text-font-size);
@@ -138,6 +153,17 @@ button::before {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
   text-align: center;
+
+  width: 85%;
+}
+
+#tour-section {
+  gap: 2rem;
+}
+
+#tour-section img {
+  width: 50%;
+  justify-self: center;
 }
