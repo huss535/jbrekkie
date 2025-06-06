@@ -3,6 +3,11 @@
   src: url(./public/fonts/Babylonica-Regular.ttf);
 }
 
+@font-face {
+  font-family: NormalText;
+  src: url(./public/fonts/IMFellDWPica-Regular.ttf);
+}
+
 :root {
   --color-text: #FFFFF0;
   --header-font-size: 7rem;
@@ -11,7 +16,7 @@
 
 html {
   font-size: 16px;
-
+  color: var(--color-text);
 }
 
 body {
@@ -19,13 +24,14 @@ body {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
+
 }
 
 h1 {
   font-family: TitleCursive;
   font-size: var(--header-font-size);
   text-align: center;
-  color: var(--color-text);
+
 
 }
 
@@ -86,4 +92,41 @@ section {
   object-fit: cover;
 
 
+}
+
+button,
+p {
+  font-family: NormalText;
+
+}
+
+button {
+  position: relative;
+  background-color: transparent;
+  color: var(--color-text);
+  border: none;
+  font-size: xx-large;
+  cursor: pointer;
+  margin-left: 10rem;
+  padding: 1.75rem;
+  transition: 1s;
+  z-index: 0;
+}
+
+button::before {
+  content: '';
+  position: absolute;
+
+
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 100%;
+  width: 100%;
+  transform: translateY(-40%);
+  background: url(./public/images/buttonBorder.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: all 0.3s ease-in-out;
+  z-index: -1;
 }
