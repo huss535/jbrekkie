@@ -46,16 +46,24 @@
 
     <section id="music-section">
       <div class="section-header">
+
         <img src="./public/images/jb-svg-icons/jb-flower.svg" alt="bird icon" />
         <h1>Music</h1>
         <img src="./public/images/jb-svg-icons/jb-flower.svg" alt="bird icon" />
       </div>
 
       <div id="music-container">
-        <img src="./public/images/jb-arrow.svg" alt="music icon" />
-        <iframe src="https://www.youtube.com/embed/i9rcfX_t3nU?si=vRlkZQ2-GBzR6yYn">
+
+        <button id="prev-video-button">
+          <img src="./public/images/jb-arrow.svg" alt="music icon" />
+        </button>
+
+
+        <iframe id="music-video-iframe">
         </iframe>
-        <img src="./public/images/jb-arrow.svg" alt="music icon" />
+        <button id="next-video-button">
+          <img src="./public/images/jb-arrow.svg" alt="music icon" />
+        </button>
       </div>
 
 
@@ -102,11 +110,14 @@
       </div>
 
       <form>
-        <textarea rows="1" required placeholder="Name"></textarea>
-        <textarea rows="1" required placeholder="Email"></textarea>
-        <textarea rows="4" required placeholder="Message"></textarea>
+        <textarea required rows="1" placeholder="Name"></textarea>
+        <textarea required rows="1" placeholder="Email"></textarea>
 
-        <button type="submit">Send Message</button>
+
+        <textarea required rows="4" placeholder="Message"></textarea>
+
+
+        <button class="button-style" type="submit">Send Message</button>
       </form>
 
     </section>

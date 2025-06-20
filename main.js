@@ -10,7 +10,7 @@ export function getTourBookingComponent(date, venue, location, buttonText) {
         <span>*</span>
 
 
-        <button>${buttonText}</button>
+        <button class = 'button-style'>${buttonText}</button>
       </div>
   `;
 }
@@ -20,7 +20,7 @@ export function getMerchComponent(merchSrc, merchName) {
      <div class="merch-container">
         <img src=${merchSrc} alt=${merchName} />
         <span>${merchName}</span>
-        <button>Buy Now</button>
+        <button class = 'button-style'>Buy Now</button>
       </div>
   `;
 }
@@ -55,11 +55,46 @@ const merchData = [
     { src: "public/images/jb-merch-1.svg", name: "Hoodie" },
     { src: "public/images/jb-merch-1.svg", name: "Poster" },
     { src: "public/images/jb-merch-1.svg", name: "Vinyl Record" },
-    { src: "public/images/jb-merch-1.svg", name: "Cap" }, { src: "public/images/jb-merch-1.svg", name: "Cap" }
+    { src: "public/images/jb-merch-1.svg", name: "Cap" },
+    { src: "public/images/jb-merch-1.svg", name: "Cap" }
 ];
 
 merchData.forEach((merch) => {
     const merchComponent = getMerchComponent(merch.src, merch.name);
     document.querySelector("#merch-section").innerHTML += merchComponent;
 });
+
+
+
+
+const musicVideoLinks = [
+    { src: "https://www.youtube.com/embed/KNT7wuqaykc?si=ELzM79WBuxmHZhLa", title: "Everybody Wants To Love You" },
+    { src: "https://www.youtube.com/embed/i9rcfX_t3nU?si=jhUTpcrx95LLnVgq", title: "Orlando in Love" },
+    { src: "https://www.youtube.com/embed/2ZfcZEIo6Bw?si=yth-sDOPWcYsWPYI", title: "Be sweet" }
+];
+
+
+
+const iframe = document.querySelector("#music-video-iframe");
+const previousButton = document.querySelector("#prev-video-button");
+const nextButton = document.querySelector("#next-video-button");
+let currentVideoIndex = 0;
+
+
+previousButton.addEventListener("click", () => {
+
+    console.log("Previous button clicked");
+    currentVideoIndex = (currentVideoIndex - 1 + musicVideoLinks.length) % musicVideoLinks.length;
+    iframe.src = musicVideoLinks[currentVideoIndex].src;
+});
+
+nextButton.addEventListener("click", () => {
+    currentVideoIndex = (currentVideoIndex + 1) % musicVideoLinks.length;
+    iframe.src = musicVideoLinks[currentVideoIndex].src;
+});
+
+
+
+
+iframe.src = musicVideoLinks[currentVideoIndex].src;
 
