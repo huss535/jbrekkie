@@ -36,7 +36,18 @@ h1 {
 }
 
 
-
+#jb-page {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  gap: 5rem;
+  padding-top: 0.25rem;
+  padding-bottom: 2rem;
+}
 
 section {
   position: relative;
@@ -46,6 +57,7 @@ section {
   justify-content: center;
   text-align: center;
   width: 100%;
+  gap: 8rem;
   min-height: 100vh;
 }
 
@@ -59,64 +71,59 @@ section {
   align-items: center;
   justify-content: flex-start;
   text-align: center;
+  width: 100%;
 
 }
 
 /* Flower / Vines SVG */
-#intro-section img:nth-child(1) {
+#flower-bunch-1 {
   position: absolute;
   top: 0;
   right: 0;
-  width: 25rem;
+  width: 30%;
   height: auto;
   object-fit: cover;
   z-index: -1;
 }
 
-#intro-section img:nth-child(2) {
+#flower-bunch-2 {
   position: absolute;
   top: 0;
   left: 0;
-  width: 25rem;
+  width: 30%;
   height: auto;
   object-fit: cover;
   transform: scaleX(-1);
   z-index: -1;
 }
 
-
-
-
-#logo-container {
-  position: relative;
-
+#intro-section-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
   text-align: center;
-  width: 35%;
 }
 
-#logo-container img {
-  max-width: 100%;
-
+#jb-logo {
+  width: 30rem;
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 1rem;
 }
-
-
 
 #jb-title {
-  width: 40%;
+  width: 40rem;
 }
 
-
-
-/*Album image in intro page*/
 #album-cover {
   position: absolute;
   bottom: 0;
-  max-width: 100%;
+  width: 110%;
   height: auto;
   object-fit: cover;
-
-
 }
+
 
 .button-style,
 p,
@@ -213,28 +220,34 @@ span {
   gap: 2rem;
 }
 
-#prev-video-button>img {
+/* #prev-video-button>img {
   transform: scaleX(-1);
 }
-
+ */
 #prev-video-button,
 #next-video-button {
   position: relative;
   background-color: transparent;
   border: none;
-  width: 15rem;
+  font-size: 15rem;
   height: auto;
   transition: transform 0.3s ease-in-out;
+  color: var(--color-text);
+
 }
 
-#prev-video-button img:hover {
+#prev-video-button {
+  transform: scaleX(-1);
+}
+
+#prev-video-button:hover {
   cursor: pointer;
   transform: scaleX(-1) translateX(5px);
   transition: transform 0.3s ease-in-out;
 }
 
 
-#next-video-button img:hover {
+#next-video-button:hover {
   cursor: pointer;
   transform: translateX(5px);
   transition: transform 0.3s ease-in-out;
@@ -250,14 +263,14 @@ iframe {
 }
 
 
-#merch-section {
+#merch-items-area {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   width: 90%;
-  gap: 10rem;
+  gap: 14rem;
   padding-inline: 2rem;
 
 }
@@ -269,7 +282,7 @@ iframe {
   align-items: center;
   justify-content: center;
   width: fit-content;
-  gap: 3rem;
+  gap: 1rem;
 }
 
 .merch-container::before {
@@ -291,8 +304,26 @@ iframe {
   z-index: 1;
 }
 
+.merch-container::after {
+  content: '';
+  position: absolute;
+  bottom: -60%;
+  left: 50%;
+  /* center anchor point */
+  transform: translateX(-50%);
+  /* shift by 50% of element width to center */
+  width: 150%;
+  height: 100%;
+  background-image: url(./public/images/jb-merch-frame-2.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top;
+
+  z-index: -1;
+}
+
 .merch-container img {
-  width: 12.5rem;
+  width: 15rem;
   height: auto;
   object-fit: cover;
 

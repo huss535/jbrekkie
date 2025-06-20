@@ -15,11 +15,12 @@ export function getTourBookingComponent(date, venue, location, buttonText) {
   `;
 }
 
-export function getMerchComponent(merchSrc, merchName) {
+export function getMerchComponent(merchSrc, merchName, merchPrice) {
     return `
      <div class="merch-container">
         <img src=${merchSrc} alt=${merchName} />
         <span>${merchName}</span>
+        <span>${merchPrice}</span>
         <button class = 'button-style'>Buy Now</button>
       </div>
   `;
@@ -51,17 +52,17 @@ tourData.forEach((tour, index) => {
 
 // Merch Data
 const merchData = [
-    { src: "public/images/jb-merch-1.svg", name: "T-Shirt" },
-    { src: "public/images/jb-merch-1.svg", name: "Hoodie" },
-    { src: "public/images/jb-merch-1.svg", name: "Poster" },
-    { src: "public/images/jb-merch-1.svg", name: "Vinyl Record" },
-    { src: "public/images/jb-merch-1.svg", name: "Cap" },
-    { src: "public/images/jb-merch-1.svg", name: "Cap" }
+    { src: "public/images/jb-merch/jb-merch-1.webp", name: "T-Shirt - Black", price: "$20" },
+    { src: "public/images/jb-merch/jb-merch-2.webp", name: "T-Shirt - White", price: "$20" },
+    { src: "public/images/jb-merch/jb-merch-3.webp", name: "Vinyl Record", price: "$25" },
+    { src: "public/images/jb-merch/jb-merch-4.webp", name: "Cassette", price: "$15" },
+    { src: "public/images/jb-merch/jb-merch-5.webp", name: "Tote Bag", price: "$30" },
+    { src: "public/images/jb-merch/jb-merch-6.webp", name: "Guitar Picks", price: "$10" }
 ];
 
 merchData.forEach((merch) => {
-    const merchComponent = getMerchComponent(merch.src, merch.name);
-    document.querySelector("#merch-section").innerHTML += merchComponent;
+    const merchComponent = getMerchComponent(merch.src, merch.name, merch.price);
+    document.querySelector("#merch-items-area").innerHTML += merchComponent;
 });
 
 
