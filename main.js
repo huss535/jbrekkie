@@ -55,7 +55,7 @@ const merchData = [
     { src: "public/images/jb-merch-1.svg", name: "Hoodie" },
     { src: "public/images/jb-merch-1.svg", name: "Poster" },
     { src: "public/images/jb-merch-1.svg", name: "Vinyl Record" },
-    { src: "public/images/jb-merch-1.svg", name: "Cap" },
+    { src: "public/images/jb-merch-1.svg", name: "Cap" }, { src: "public/images/jb-merch-1.svg", name: "Cap" }
 ];
 
 merchData.forEach((merch) => {

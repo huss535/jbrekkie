@@ -291,3 +291,38 @@ iframe {
   object-fit: cover;
 
 }
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 35%;
+  gap: 3rem;
+
+}
+
+form textarea {
+  font-family: NormalText;
+  width: 100%;
+  padding: 1rem;
+  font-size: var(--text-font-size);
+  resize: none;
+  background-color: #eee7d7;
+  overflow: hidden;
+  border: solid 0.35rem black;
+  border-radius: 0.15rem;
+}
+
+::placeholder {
+  font-family: NormalText;
+  color: black;
+
+}
+
+::-ms-input-placeholder {
+  /* Edge 12 -18 */
+  font-family: NormalText;
+  color: black;
+
+}
