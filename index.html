@@ -6,27 +6,30 @@
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
-  <title>Indify</title>
+  <title>Japanese Breakfast</title>
 </head>
 
 <body>
   <div id="jb-page">
 
     <section id="intro-section">
-      <img src="public/images/jb-svg-icons/jb-bq.svg" />
-      <img src="public/images/jb-svg-icons/jb-bq.svg" />
+      <img id="flower-bunch-1" src="public/images/jb-svg-icons/jb-bq.svg" />
+      <img id="flower-bunch-2" src="public/images/jb-svg-icons/jb-bq.svg" />
 
-      <div id="logo-container">
+
+
+      <div id="intro-section-content">
+
         <img id="jb-logo" src="./public/images/jblogo.png" alt="jb logo" />
-        <span>Presents</span>
+        <img id="jb-title" src="./public/images/album-title.png" alt="jb title" />
+        <img id="album-cover" src="./public/images/album_background.png" alt="album cover" />
+
       </div>
 
-      <img id="jb-title" src="./public/images/album-title.png" alt="jb title" />
-
-      <img id="album-cover" src="./public/images/album_background.png" alt="album cover" />
-
-
     </section>
+
+
+
     <section id="tour-section">
 
       <div class="section-header">
@@ -42,16 +45,41 @@
 
 
     </section>
+
+
     <section id="music-section">
       <div class="section-header">
+
         <img src="./public/images/jb-svg-icons/jb-flower.svg" alt="bird icon" />
         <h1>Music</h1>
         <img src="./public/images/jb-svg-icons/jb-flower.svg" alt="bird icon" />
       </div>
 
+      <div id="music-container">
+
+        <button id="prev-video-button">
+
+          ᐅ
+          <!--  <img src="./public/images/jb-arrow.svg" alt="music icon" /> -->
+        </button>
+
+
+
+        <iframe id="music-video-iframe">
+        </iframe>
+        <button id="next-video-button">
+          ᐅ
+          <!--   <img src="./public/images/jb-arrow.svg" alt="music icon" /> -->
+        </button>
+      </div>
+
 
     </section>
+
+
+
     <section id="merch-section">
+
       <div class="section-header">
         <img src="./public/images/jb-svg-icons/jb-skull.svg" alt="merch icon" />
         <h1>Merch</h1>
@@ -59,15 +87,45 @@
       </div>
 
 
+      <div id="merch-items-area">
+
+      </div>
+
+
+
+      <!--  <div class="merch-container">
+        <img src="./public/images/jb-merch-1.svg" alt="merch item 1" />
+        <span>Merch Item 1</span>
+        <button>Buy Now</button>
+      </div>
+ -->
+
     </section>
+
+
+
+
+
+
+
     <section id="contact-section">
+
       <div class="section-header">
         <img src="./public/images/jb-svg-icons/jb-quil.svg" alt="contact icon" />
         <h1>Contact</h1>
         <img src="./public/images/jb-svg-icons/jb-quil.svg" alt="contact icon" />
-
       </div>
 
+      <form>
+        <textarea required rows="1" placeholder="Name"></textarea>
+        <textarea required rows="1" placeholder="Email"></textarea>
+
+
+        <textarea required rows="4" placeholder="Message"></textarea>
+
+
+        <button class="button-style" type="submit">Send Message</button>
+      </form>
 
     </section>
 
