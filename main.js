@@ -1,3 +1,15 @@
+import { animate, svg, stagger } from 'animejs';
+
+
+animate(svg.createDrawable('.line'), {
+    draw: ['0 0', '1 0', '0 1'],
+    ease: 'inOutQuad',
+    duration: 5000,
+    delay: stagger(0),
+    loop: false
+});
+
+
 export function getTourBookingComponent(date, venue, location, buttonText) {
     return `
   <div class="tour-info">
@@ -21,7 +33,7 @@ export function getMerchComponent(merchSrc, merchName, merchPrice) {
         <img src=${merchSrc} alt=${merchName} />
         <span>${merchName}</span>
         <span>${merchPrice}</span>
-        <button class = 'button-style'>Buy Now</button>
+        <button class = 'button-style'>Purchase Item</button>
       </div>
   `;
 }
@@ -94,8 +106,7 @@ nextButton.addEventListener("click", () => {
     iframe.src = musicVideoLinks[currentVideoIndex].src;
 });
 
-
-
-
 iframe.src = musicVideoLinks[currentVideoIndex].src;
+
+
 
